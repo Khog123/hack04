@@ -11,7 +11,20 @@ int main(){
     //Take infomation from the user
     printf("Enter your initial starting balance");
     scanf("%lf",&startBalance);
-    printf("A monthly contribution Amout(We well)")
+    printf("A monthly contribution Amout(We well asume it will be the same over the life of the saving plan):");
+    scanf("%lf",&monthlyContributionAmount);
+    printf("An(average) anual rate of return(on the scale(0,1)):");
+    scanf("%lf",&annnualReturnRate);
+    printf("An(average) annual rate of inflation(on the scale(0,1)):");
+    scanf("%lf",&annualInlationRate);
+    printf("Enter a number of year until retirement:");
+    scanf("%lf",&retirement);
+
+    //years convert to month and programe according the month base and also total 
+    month = retirementYear*12;
+    adjustInflationReturnRate=((1+annualReturnRate)/(1+annualInflationRate=))-1;
+    printf("|Month|\t|Interest   |\tBalance            |\n");
+    
 }
 
 
