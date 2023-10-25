@@ -24,7 +24,21 @@ int main(){
     month = retirementYear*12;
     adjustInflationReturnRate=((1+annualReturnRate)/(1+annualInflationRate=))-1;
     printf("|Month|\t|Interest   |\tBalance            |\n");
-    
+    for (int i=1; i<=month; i++){
+        interest=(adjustInflationReturnRate*startBalance)/12;
+        
+        //Balance value modified and stored then used again in the upper function with different value
+         startBalance=startBalance+interest+monthlyContributionAmount;
+        
+         //I used the below concept to add all the interest/month
+         totalInterestEarned=totalInterestEarned+interest;
+         printf("|%5i|\t|$%10.2lf|\t|$%2lf|\n",i,interest,startBalance);    
+    }
+    printf("______________________________________________");
+    printf("Total interest Earned: $ %0.2lf\n",totalInterestEarned);
+    printf("Total nest egg: %0.2lf\n",startBalance);
+
+    return 0;
 }
 
 
