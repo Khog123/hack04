@@ -19,5 +19,9 @@ int main(){
     printf("Dangerous\n");
 }else if (decibel_level >= 130 && decibel_level <= 194){
     printf("Very Dangerous\n");
+}else {
+    printf("Invalid decibel level. Please enter a valid value.\n");
 }
+
+return 0;
 }
